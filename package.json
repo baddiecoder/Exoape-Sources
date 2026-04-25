@@ -1,0 +1,24 @@
+{
+  "name": "exoape-sources",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public browser-served source recovery workspace for Exoape-related motion/design research.",
+  "type": "module",
+  "scripts": {
+    "setup:browser": "playwright install --with-deps chromium",
+    "recover": "node scripts/recover-public-assets.mjs",
+    "summarize": "node scripts/summarize-inventory.mjs"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "js-beautify": "^1.15.1",
+    "p-limit": "^6.2.0",
+    "playwright": "^1.49.1",
+    "prettier": "^3.4.2",
+    "source-map": "^0.7.4"
+  },
+  "devDependencies": {}
+}
