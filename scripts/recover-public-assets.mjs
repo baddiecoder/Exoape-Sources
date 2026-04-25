@@ -104,7 +104,7 @@ async function saveExtracted(rawRelativePath, buffer, type) {
 
 async function captureAsset({ targetUrl, requestUrl, finalUrl, status, contentType = '', resourceType = '', buffer, method }) {
   if (assetRecords.length >= options.maxAssets) return;
-  const skipReason = shouldSkipUrl(finalUrl || requestUrl, resourceType);
+  const skipReason = shouldSkipUrl(finalUrl || requestUrl, resourceType, contentType);
   const kind = inferAssetType(finalUrl || requestUrl, contentType);
   if (skipReason) {
     addRecord({
@@ -259,8 +259,9 @@ async function runRuntimePass(targetUrl) {
       const resourceType = response.request().resourceType();
       const contentType = response.headers()['content-type'] || '';
       const status = response.status();
-      if (shouldSkipUrl(url, resourceType)) {
-        addRecord({ targetUrl, requestUrl: url, finalUrl: url, status, contentType, resourceType, savedPath: null, size: 0, hash: null, skipped: true, skipReason: shouldSkipUrl(url, resourceType), sourceTarget: targetUrl, captureMethod: 'runtime', assetType: inferAssetType(url, contentType) });
+      const responseSkipReason = shouldSkipUrl(url, resourceType, contentType);
+      if (responseSkipReason) {
+        addRecord({ targetUrl, requestUrl: url, finalUrl: url, status, contentType, resourceType, savedPath: null, size: 0, hash: null, skipped: true, skipReason: responseSkipReason, sourceTarget: targetUrl, captureMethod: 'runtime', assetType: inferAssetType(url, contentType) });
         return;
       }
       const buffer = await response.body();

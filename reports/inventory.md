@@ -1,6 +1,6 @@
 # Recovery Inventory
 
-Generated: 2026-04-25T09:17:18.260Z
+Generated: 2026-04-25T09:18:42.316Z
 
 ## Targets read from targets.txt
 - https://www.exoape.com/work/pixelflakes
@@ -19,11 +19,10 @@ Generated: 2026-04-25T09:17:18.260Z
 - html: 2
 - js: 17
 - json: 2
-- other: 19
 
 ## Skipped assets by reason
+- image: 20
 - font: 3
-- image: 1
 - video: 8
 
 ## Source-map findings
@@ -36,8 +35,8 @@ Generated: 2026-04-25T09:17:18.260Z
 
 ## Failures and HTTP errors
 - [static] https://www.exoape.com/work/pixelflakes :: Maximum number of redirects exceeded
-- [runtime-response] https://api.storyblok.com/v2/cdn/stories/work/pixelflakes?version=published&cv=1777108599027&resolve_relations=ProjectNextProject.project&token=qDQxzVqZ6yC6Q11ONwNINQtt :: response.body: Response body is unavailable for redirect responses
-- [runtime-response] https://api.storyblok.com/v2/cdn/stories/global?version=published&cv=1777108599782&token=qDQxzVqZ6yC6Q11ONwNINQtt :: response.body: Response body is unavailable for redirect responses
+- [runtime-response] https://api.storyblok.com/v2/cdn/stories/work/pixelflakes?version=published&cv=1777108683107&resolve_relations=ProjectNextProject.project&token=qDQxzVqZ6yC6Q11ONwNINQtt :: response.body: Response body is unavailable for redirect responses
+- [runtime-response] https://api.storyblok.com/v2/cdn/stories/global?version=published&cv=1777108683535&token=qDQxzVqZ6yC6Q11ONwNINQtt :: response.body: Response body is unavailable for redirect responses
 
 ## Coverage gaps
 - Small pass only; not all targets and not deep interaction paths.

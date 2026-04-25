@@ -52,11 +52,16 @@ export function inferAssetType(url, contentType = '') {
   return 'other';
 }
 
-export function shouldSkipUrl(url, resourceType = '') {
+export function shouldSkipUrl(url, resourceType = '', contentType = '') {
   const u = url.toLowerCase();
   if (/\.(png|jpe?g|gif|webp|svg|ico|avif)$/i.test(u)) return 'image';
   if (/\.(mp4|webm|mov|m3u8)$/i.test(u)) return 'video';
   if (/\.(mp3|wav|ogg|aac|flac)$/i.test(u)) return 'audio';
+  const ct = contentType.toLowerCase();
+  if (ct.startsWith('image/')) return 'image';
+  if (ct.startsWith('video/')) return 'video';
+  if (ct.startsWith('audio/')) return 'audio';
+  if (ct.includes('font')) return 'font';
   if (/\.(woff2?|ttf|otf|eot)$/i.test(u) || resourceType === 'font') return 'font';
   if (/google-analytics|gtag|segment|mixpanel|hotjar|doubleclick|facebook\.com\/tr/i.test(u)) return 'analytics';
   return null;
