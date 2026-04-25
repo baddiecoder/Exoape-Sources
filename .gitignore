@@ -4,5 +4,10 @@ node_modules/
 .env.*
 *.log
 
-# Keep recovered source/artifacts tracked unless intentionally too large.
-# Do not ignore raw/, maps/, reconstructed/, extracted/, reports/, or scripts/.
+# Full crawl artifacts are intentionally excluded from git tracking.
+raw/
+extracted/
+maps/
+reconstructed/
+logs/
+reports/assets.json
