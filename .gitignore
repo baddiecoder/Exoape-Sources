@@ -16,3 +16,26 @@ reports/assets.json
 work/sources/**/raw/
 work/sources/**/reports/extraction-summary.json
 work/sources/**/reports/
+
+# Runtime-lab capture artifacts (never commit)
+exoape-runtime-lab/capture/**/raw/
+exoape-runtime-lab/capture/**/maps/
+exoape-runtime-lab/capture/**/reconstructed/
+exoape-runtime-lab/capture/**/logs/
+exoape-runtime-lab/capture/**/reports/extraction-summary.json
+
+# Large media dumps
+*.mp4
+*.webm
+*.mov
+*.avi
+*.mkv
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.woff
+*.woff2
+*.ttf
+*.otf

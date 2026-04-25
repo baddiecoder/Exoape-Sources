@@ -7,7 +7,12 @@
   "scripts": {
     "setup:browser": "playwright install --with-deps chromium",
     "recover": "node scripts/recover-public-assets.mjs",
-    "summarize": "node scripts/summarize-inventory.mjs"
+    "summarize": "node scripts/summarize-inventory.mjs",
+    "lab:setup": "bash exoape-runtime-lab/scripts/setup-codex.sh",
+    "scan": "node exoape-runtime-lab/tools/scan-signatures.mjs",
+    "trace": "node exoape-runtime-lab/tools/trace-control-flow.mjs",
+    "classify": "node exoape-runtime-lab/tools/classify-modules.mjs",
+    "evidence": "node exoape-runtime-lab/tools/build-evidence-pack.mjs"
   },
   "dependencies": {
     "axios": "^1.7.9",
