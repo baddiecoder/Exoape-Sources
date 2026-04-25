@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SignatureHit",
+  "type": "object",
+  "properties": {
+    "term": { "type": "string" },
+    "file": { "type": "string" },
+    "snippet_id": { "type": "string" },
+    "confidence": { "type": "string", "enum": ["exact", "observed", "inferred", "unknown"] }
+  },
+  "required": ["term", "file"]
+}

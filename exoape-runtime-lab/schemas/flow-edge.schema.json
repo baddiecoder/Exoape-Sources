@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ControlFlowEdge",
+  "type": "object",
+  "properties": {
+    "from": { "type": "string" },
+    "transport": { "type": "string", "enum": ["call", "event", "state", "timeline"] },
+    "to": { "type": "string" },
+    "confidence": { "type": "string", "enum": ["exact", "observed", "inferred", "unknown"] }
+  },
+  "required": ["from", "transport", "to"]
+}
