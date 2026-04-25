@@ -11,3 +11,8 @@ maps/
 reconstructed/
 logs/
 reports/assets.json
+
+# Targeted extraction artifacts
+work/sources/**/raw/
+work/sources/**/reports/extraction-summary.json
+work/sources/**/reports/
