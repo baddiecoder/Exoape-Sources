@@ -1,0 +1,90 @@
+GLOBAL_RAF_TICK:
+  - requestAnimationFrame
+  - cancelAnimationFrame
+  - gsap.ticker
+  - ticker.add
+  - ticker.remove
+  - tick(
+  - .raf(
+
+SCROLL_ENGINE_WIRING:
+  - advance(
+  - lerp
+  - duration
+  - easing
+  - wheel
+  - touch
+  - ResizeObserver
+  - scroll:onStart
+  - scroll:onScroll
+  - scroll:onStop
+
+ROUTER_TRANSITION:
+  - beforeEach
+  - afterEach
+  - onBeforeRouteLeave
+  - navigateTo
+  - transition
+  - page-leave
+  - page-enter
+  - is-overlay
+  - overlay-visible
+
+MENU_TIMELINE:
+  - is-menu
+  - menu-open
+  - setMenuOpen
+  - toggleMenu
+  - burger
+  - close
+  - autoAlpha
+  - pointerEvents
+  - timeline({
+  - paused
+
+LOADER_LIFECYCLE:
+  - intro
+  - loader
+  - preloader
+  - loading
+  - progress
+  - assetsLoaded
+  - fonts.ready
+  - window.onload
+
+STATE_STORE:
+  - setMenuOpen
+  - setQuoteOpen
+  - setFilterOpen
+  - setFooterVisible
+  - menuOpen
+  - quoteOpen
+  - filterOpen
+  - footerVisible
+
+CURSOR:
+  - cursor
+  - setCursor
+  - mousemove
+  - pointer
+
+SECTION_TIMELINES:
+  - ScrollTrigger
+  - timeline({
+  - fromTo(
+  - scrub
+  - onUpdate
+
+MASK_TEXT_REVEAL:
+  - SplitType
+  - linesClass
+  - mask
+  - yPercent
+  - drawSVG
+
+LAYOUT_PRIMITIVES:
+  - position:fixed
+  - overflow:hidden
+  - overflow-y:auto
+  - .scroll
+  - .content

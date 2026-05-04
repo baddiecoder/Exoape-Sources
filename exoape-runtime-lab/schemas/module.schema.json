@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ModuleClassification",
+  "type": "object",
+  "properties": {
+    "file": { "type": "string" },
+    "class": {
+      "type": "string",
+      "enum": [
+        "CORE_RUNTIME",
+        "SCROLL_ENGINE",
+        "RAF_ENGINE",
+        "STATE_STORE",
+        "ROUTER_TRANSITION",
+        "LOADER",
+        "MENU_NAV",
+        "CURSOR",
+        "SECTION_COMPONENT",
+        "VENDOR"
+      ]
+    },
+    "confidence": { "type": "string", "enum": ["exact", "observed", "inferred", "unknown"] },
+    "evidence_snippets": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": ["file", "class", "confidence"]
+}

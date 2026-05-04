@@ -1,0 +1,18 @@
+{
+  "project": "exoape-runtime-lab",
+  "approval_policy": "never",
+  "sandbox_mode": "danger-full-access",
+  "network_access": "enabled",
+  "default_mode": "analysis",
+  "reporting": {
+    "require_confidence_labels": true,
+    "require_snippet_ids": true,
+    "max_snippet_lines": 20
+  },
+  "guardrails": {
+    "no_broad_scrape": true,
+    "no_auth_bypass": true,
+    "no_token_extraction": true,
+    "no_raw_commit": true
+  }
+}
