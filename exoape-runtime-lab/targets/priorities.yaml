@@ -1,0 +1,14 @@
+systems:
+  - GLOBAL_RAF_TICK
+  - SCROLL_ENGINE_WIRING
+  - ROUTER_TRANSITION
+  - MENU_TIMELINE
+  - LOADER_LIFECYCLE
+
+evidence_rules:
+  max_snippet_lines: 20
+  confidence_labels:
+    - exact
+    - observed
+    - inferred
+    - unknown
